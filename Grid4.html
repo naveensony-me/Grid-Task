@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        #nav{
+            width: 100%;
+            min-height: 80px;
+            background-color: rgb(211, 194, 12);
+            text-align: center;
+            line-height: 80px;
+            margin-bottom: 10px;
+
+        }
+        .row{
+            width: 100%;
+            min-height: 100px;
+            margin-bottom: 10px;
+            
+        }
+        .col{
+            width: 20%;
+            min-height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .clearfix::after
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .col:nth-child(2), .col:nth-child(3){
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        #boxes{
+            width: 100%;
+            min-height: 80px;
+            margin-bottom: 10px;
+            
+        }
+        #boxes .box{
+            width: 30%;
+            min-height: 80px;
+            background-color: chartreuse;
+            float: left;
+            text-align: center;
+            line-height: 80px;
+        }
+        #boxes .box:nth-child(2){
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        #footer{
+            width: 100%;
+            min-height:50px;
+            background-color: darkorange;
+        }
+        #wrapper{
+            width: 80%;
+            margin: auto;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="nav">Nav</div>
+    <div class="row" class="clearfix">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row" class="clearfix">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+
+    </div>
+    <div class="row" class="clearfix">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+
+    </div>
+    <div class="row" class="clearfix">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <div id="boxes" class="clearfix">
+        <div class="box">Box1</div>
+        <div class="box">Box1</div>
+        <div class="box">Box1</div>
+    </div>
+    <div id="footer">Footer</div>
+</div>
+    
+</body>
+</html>

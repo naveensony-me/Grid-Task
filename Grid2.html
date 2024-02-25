@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+        #main{
+            width: 100%;
+            min-height: 50px;
+            background-color: rgb(193, 11, 68);
+            margin-bottom: 10px;
+        }
+        #div1{
+            width: 50%;
+            min-height: 50px;
+            float: left;
+            line-height: 50px;
+            padding-left: 2%;
+            
+        }
+        #div2{
+            width: 50%;
+            min-height: 50px;
+            float: right;
+            line-height: 50px;
+            
+        }
+        .clearfix::after
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #div3{
+            width: 100%;
+            min-height: 100px;
+            background-color: rgb(9, 154, 170); 
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 10px;
+        }
+        #div4{
+            width: 100%;
+            min-height: 80px;
+            background-color: rgb(14, 185, 102);
+            text-align: center;
+            line-height: 80px;
+            margin-bottom: 10px;
+        }
+        #main-body{
+            width: 100%;
+            min-height: 400px;
+            margin-bottom: 10px;
+            
+        }
+        
+        #main-body .box{
+            width:30%;
+            min-height:400px;
+            background-color: rgb(197, 155, 5);
+            float: left;   
+            text-align: center;
+            line-height: 400px;
+        }
+        #main-body .box:nth-child(2){
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        #footer{
+            width: 100%;
+            min-height: 50px;
+            background-color: rgb(173, 230, 178);
+            text-align: center;
+            line-height: 50px;
+        }
+        #wrapper{
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="main" class="clearfix">
+        <div id="div1">
+            Div1
+        </div>
+        <div id="div2">Div2</div>
+    </div>
+    <div id="div3">Div3</div>
+    <div id="div4">Div4</div>
+    <div id="main-body" class="clearfix">
+        <div class="box">Div5</div>
+        <div class="box">Div6</div>
+        <div class="box">Div7</div>
+    </div>
+    <div id="footer">Div8</div>
+</div>
+</body>
+
+</body>
+</html>
