@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout-5 Naveen Sony</title>
+  </head>
+  <style>
+
+    .item1 {
+      grid-area: Header;
+      background-color: black;
+      color: white;
+    }
+    .item2 {
+      grid-area: Menu;
+      background-color: red;
+      color: white;
+    }
+    .item3 {
+      grid-area: Hero;
+      background-color: rgb(10, 121, 200);
+      color: white;
+    }
+    .item4 {
+      grid-area: Main;
+      background: #000;
+      color: white;
+    }
+    .item5 {
+      grid-area: Banner;
+      background-color: yellow;
+      color: black;
+    }
+    .item6 {
+      grid-area: Extra;
+      background-color: lightgreen;
+      color: black;
+    }
+    .item7 {
+      grid-area: Image;
+      background-color: lightcyan;
+    }
+    .item8{
+      grid-area: white;
+      background-color: white;
+    }
+    .container {
+      display: grid;
+      grid-template-areas:
+        "Header Header Menu Menu Menu Menu"
+        "Hero Hero Hero Hero Hero Hero"
+        "Hero Hero Hero Hero Hero Hero"
+        "Main Main Main white white Image"
+        "Main Main Main white white Extra"
+        "Banner Banner Banner Banner Banner Banner";
+      background-color: white;
+      height: 100vh;
+      width: 80%;
+      margin: auto;
+    }
+    .container div {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    @media (max-width:468px)
+    {
+      .container{
+      display: grid;
+      grid-template-areas:
+        "Header Header Menu Menu Menu Menu"
+        "Hero Hero Hero Hero Hero Hero"
+        "Hero Hero Hero Hero Hero Hero"
+        "Main Main Main white white Image"
+        "Main Main Main white white Extra"
+        "Banner Banner Banner Banner Banner Banner";
+      background-color: white;
+      height: 100vh;
+      
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        display: grid;
+        grid-template-areas:
+          "Header Header Header Header Header Header"
+          "Hero Hero Hero Hero Hero Hero"
+          "Menu Menu Main Main Main Main"
+          "Menu Menu Banner Banner Banner Banner"
+          "Menu Menu  Extra Extra Extra Image";
+          
+          
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        display: grid;
+        grid-template-areas:
+          "Header Header Header Header Header Header"
+          "Menu Menu Menu Menu Menu Menu"
+          "Hero Hero Hero Hero Hero Hero"
+          "Main Main Main Main Main Main"
+          "Banner Banner Banner Banner Banner Banner"
+          "Extra Extra Extra Extra Extra Extra"
+          "Image Image Image Image Image Image";
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+      }
+    } 
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="item1">Header</div>
+      <div class="item2">Menu</div>
+      <div class="item3">Hero</div>
+      <div class="item4">Main</div>
+      <div class="item5">Banner</div>
+      <div class="item6">Extra</div>
+      <div class="item7">Image</div>
+      <div class="item8"></div>
+    </div>
+  </body>
+</html>
